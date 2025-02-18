@@ -1,0 +1,94 @@
+.gameContainer {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 1000px;
+  height: 600px;
+  background-image: url("/images/ciel.png");
+  text-align: center;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 3px 3px 0px #d48b00, 6px 6px 0px #9c6500;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  animation: bounce 1.5s infinite;
+}
+
+.description {
+  font-size: 1.5rem;
+  color: #444;
+  font-weight: 500;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.birds {
+  width: 400px;
+  height: auto;
+  animation: fly 3s infinite alternate ease-in-out;
+}
+
+.gameBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.3s ease;
+}
+
+.gameBtn img {
+  width: 100px;
+  height: auto;
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.3));
+}
+
+.gameBtn:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Animation de saut du titre */
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+/* Animation du vol de l'oiseau */
+@keyframes fly {
+  from {
+      transform: translateY(0);
+  }
+  to {
+      transform: translateY(-20px);
+  }
+}
+
+.quitBtn {
+  background-color: #ff4d4d; /* Rouge pour attirer l'attention */
+  color: white; /* Texte blanc */
+  padding: 10px 20px; /* Espacement interne */
+  font-size: 18px; /* Taille du texte */
+  border: none; /* Pas de bordure */
+  border-radius: 10px; /* Coins arrondis */
+  cursor: pointer; /* Curseur pointer pour indiquer qu'il est cliquable */
+  margin-top: 20px; /* Un peu d'espace au-dessus */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Animations pour l'effet au survol */
+}
+
+.quitBtn:hover {
+  background-color: #ff1a1a; /* Changer la couleur en rouge plus foncé au survol */
+  transform: scale(1.1); /* Agrandir légèrement le bouton */
+}

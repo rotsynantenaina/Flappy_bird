@@ -1,0 +1,168 @@
+/*
+.gameOver {
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #60bdff;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.sad {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+  animation: bounce 1s infinite alternate;
+}
+
+.title {
+  padding: 10px;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 20px;
+}
+
+.description{
+  color: red;
+  font-weight: bold;
+}
+
+.button {
+  margin: 10px 0;
+  border: none;
+  display: block;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 8px;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.button:active {
+  transform: scale(1);
+}
+
+.button:focus {
+  outline: none;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+*/
+
+/* Conteneur principal de l'écran Game Over */
+.gameOver {
+  width: 800px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #74cbee, #b2d8e7);
+  text-align: center;
+  padding: 20px;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Titre animé */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff4747;
+  text-shadow: 3px 3px 0px #c41c1c, 6px 6px 0px #921313;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  animation: shake 0.5s ease-in-out infinite alternate;
+}
+
+/* Image triste */
+.sad {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Description du score final */
+.description {
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 20px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Boutons interactifs */
+.button {
+  background: #ff4747;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  transform: scale(1.1);
+  background: #c41c1c;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+/* Animation de tremblement du titre */
+@keyframes shake {
+  0% {
+      transform: translateX(-5px);
+  }
+  100% {
+      transform: translateX(5px);
+  }
+}
+
+/* Animation d'apparition en fondu */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
